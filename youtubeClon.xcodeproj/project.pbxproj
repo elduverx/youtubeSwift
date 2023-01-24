@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C643B51B297DD9F800532FEF /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C643B51A297DD9F800532FEF /* HomeViewController.storyboard */; };
+		C643B51E297DDBCF00532FEF /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643B51D297DDBCF00532FEF /* HomeProvider.swift */; };
+		C643B520297FF17100532FEF /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643B51F297FF17100532FEF /* HomePresenter.swift */; };
 		C661E3772978762200929331 /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E3762978762200929331 /* ChannelModel.swift */; };
 		C661E3792978765400929331 /* PlaylistItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E3782978765400929331 /* PlaylistItemsModel.swift */; };
 		C661E37C2978834600929331 /* RootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E37B2978834600929331 /* RootPageViewController.swift */; };
 		C661E37E2978835F00929331 /* MainViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E37D2978835F00929331 /* MainViewViewController.swift */; };
 		C661E3862979684D00929331 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E3842979684D00929331 /* HomeViewController.swift */; };
-		C661E3872979684D00929331 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C661E3852979684D00929331 /* HomeViewController.xib */; };
 		C661E38A2979686100929331 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E3882979686100929331 /* VideosViewController.swift */; };
 		C661E38B2979686100929331 /* VideosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C661E3892979686100929331 /* VideosViewController.xib */; };
 		C661E38E2979686D00929331 /* PlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E38C2979686D00929331 /* PlaylistsViewController.swift */; };
@@ -21,6 +23,10 @@
 		C661E3932979688200929331 /* ChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C661E3912979688200929331 /* ChannelViewController.xib */; };
 		C661E3962979689B00929331 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E3942979689B00929331 /* AboutViewController.swift */; };
 		C661E3972979689B00929331 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C661E3952979689B00929331 /* AboutViewController.xib */; };
+		C661E39A297BB9C800929331 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E399297BB9C800929331 /* ServiceLayer.swift */; };
+		C661E39C297BB9DA00929331 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E39B297BB9DA00929331 /* NetworkError.swift */; };
+		C661E39E297BBA3500929331 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E39D297BBA3500929331 /* RequestModel.swift */; };
+		C661E3A1297BBD7500929331 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C661E3A0297BBD7500929331 /* Constants.swift */; };
 		C6FC201F2976FD19006D262A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC201E2976FD19006D262A /* AppDelegate.swift */; };
 		C6FC20212976FD19006D262A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC20202976FD19006D262A /* SceneDelegate.swift */; };
 		C6FC20232976FD19006D262A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC20222976FD19006D262A /* ViewController.swift */; };
@@ -32,12 +38,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C643B51A297DD9F800532FEF /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		C643B51D297DDBCF00532FEF /* HomeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProvider.swift; sourceTree = "<group>"; };
+		C643B51F297FF17100532FEF /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		C661E3762978762200929331 /* ChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelModel.swift; sourceTree = "<group>"; };
 		C661E3782978765400929331 /* PlaylistItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItemsModel.swift; sourceTree = "<group>"; };
 		C661E37B2978834600929331 /* RootPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPageViewController.swift; sourceTree = "<group>"; };
 		C661E37D2978835F00929331 /* MainViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewController.swift; sourceTree = "<group>"; };
 		C661E3842979684D00929331 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		C661E3852979684D00929331 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		C661E3882979686100929331 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
 		C661E3892979686100929331 /* VideosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosViewController.xib; sourceTree = "<group>"; };
 		C661E38C2979686D00929331 /* PlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +54,10 @@
 		C661E3912979688200929331 /* ChannelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelViewController.xib; sourceTree = "<group>"; };
 		C661E3942979689B00929331 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C661E3952979689B00929331 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		C661E399297BB9C800929331 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
+		C661E39B297BB9DA00929331 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		C661E39D297BBA3500929331 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		C661E3A0297BBD7500929331 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C6FC201B2976FD19006D262A /* youtubeClon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youtubeClon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6FC201E2976FD19006D262A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6FC20202976FD19006D262A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C643B51C297DDBBF00532FEF /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				C643B51D297DDBCF00532FEF /* HomeProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		C661E37A2978832800929331 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,10 +137,54 @@
 		C661E3832979682000929331 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C661E3842979684D00929331 /* HomeViewController.swift */,
-				C661E3852979684D00929331 /* HomeViewController.xib */,
+				C661E3A4297DD84D00929331 /* Presenter */,
+				C661E3A3297DD84400929331 /* View */,
+				C661E3A2297DD83200929331 /* Model */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C661E398297BB99300929331 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C661E399297BB9C800929331 /* ServiceLayer.swift */,
+				C661E39D297BBA3500929331 /* RequestModel.swift */,
+				C661E39B297BB9DA00929331 /* NetworkError.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		C661E39F297BBD6800929331 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C661E3A0297BBD7500929331 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C661E3A2297DD83200929331 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C643B51C297DDBBF00532FEF /* Provider */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C661E3A3297DD84400929331 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C661E3842979684D00929331 /* HomeViewController.swift */,
+				C643B51A297DD9F800532FEF /* HomeViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C661E3A4297DD84D00929331 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C643B51F297FF17100532FEF /* HomePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		C6FC20122976FD19006D262A = {
@@ -142,6 +206,8 @@
 		C6FC201D2976FD19006D262A /* youtubeClon */ = {
 			isa = PBXGroup;
 			children = (
+				C661E39F297BBD6800929331 /* Utils */,
+				C661E398297BB99300929331 /* ServiceLayer */,
 				C661E3832979682000929331 /* Home */,
 				C661E3822979681900929331 /* Videos */,
 				C661E3812979680900929331 /* Playlists */,
@@ -233,9 +299,9 @@
 				C6FC202B2976FD1B006D262A /* LaunchScreen.storyboard in Resources */,
 				C661E3972979689B00929331 /* AboutViewController.xib in Resources */,
 				C6FC20282976FD1B006D262A /* Assets.xcassets in Resources */,
+				C643B51B297DD9F800532FEF /* HomeViewController.storyboard in Resources */,
 				C661E38B2979686100929331 /* VideosViewController.xib in Resources */,
 				C6FC20262976FD19006D262A /* Main.storyboard in Resources */,
-				C661E3872979684D00929331 /* HomeViewController.xib in Resources */,
 				C661E3932979688200929331 /* ChannelViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,19 +314,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6FC20232976FD19006D262A /* ViewController.swift in Sources */,
+				C661E39C297BB9DA00929331 /* NetworkError.swift in Sources */,
 				C661E3772978762200929331 /* ChannelModel.swift in Sources */,
+				C643B520297FF17100532FEF /* HomePresenter.swift in Sources */,
 				C661E38A2979686100929331 /* VideosViewController.swift in Sources */,
 				C6FC2034297709AE006D262A /* PlaylistModel.swift in Sources */,
 				C661E38E2979686D00929331 /* PlaylistsViewController.swift in Sources */,
+				C661E39E297BBA3500929331 /* RequestModel.swift in Sources */,
 				C661E3922979688200929331 /* ChannelViewController.swift in Sources */,
 				C661E3792978765400929331 /* PlaylistItemsModel.swift in Sources */,
 				C661E37E2978835F00929331 /* MainViewViewController.swift in Sources */,
 				C661E3862979684D00929331 /* HomeViewController.swift in Sources */,
+				C643B51E297DDBCF00532FEF /* HomeProvider.swift in Sources */,
 				C6FC201F2976FD19006D262A /* AppDelegate.swift in Sources */,
+				C661E39A297BB9C800929331 /* ServiceLayer.swift in Sources */,
 				C661E3962979689B00929331 /* AboutViewController.swift in Sources */,
 				C6FC203629786E76006D262A /* VideoModel.swift in Sources */,
 				C6FC20212976FD19006D262A /* SceneDelegate.swift in Sources */,
 				C661E37C2978834600929331 /* RootPageViewController.swift in Sources */,
+				C661E3A1297BBD7500929331 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,18 +7,25 @@
 
 import UIKit
 
+protocol RootPageProtocol: AnyObject{
+  func currentPage(_ index: Int)
+  
+}
+
 class RootPageViewController: UIPageViewController {
   
   var subViewControllers = [UIViewController]()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-      delegate = self
-      dataSource = self
-      setupViewControllers()
-    }
+  var currentIndex = 0
+  weak var delegateRoot: RootPageProtocol?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
+    delegate = self
+    dataSource = self
+    setupViewControllers()
+  }
+  
   private func setupViewControllers(){
     subViewControllers = [
       HomeViewController(),
@@ -27,6 +34,7 @@ class RootPageViewController: UIPageViewController {
       ChannelViewController(),
       AboutViewController()
     ]
+    _ = subViewControllers.enumerated().map({$0.element.view.tag = $0.offset})
     setViewControllerFromIndex(index: 0, direction: .forward)
   }
   
@@ -34,11 +42,11 @@ class RootPageViewController: UIPageViewController {
     setViewControllers([subViewControllers[index]], direction: direction, animated: animated)
   }
   
-//
-//  override func setViewControllers(_ viewControllers: [UIViewController]?, direction: UIPageViewController.NavigationDirection, animated: Bool, completion: ((Bool) -> Void)? = nil) {
-//    <#code#>
-//  }
-    
+  //
+  //  override func setViewControllers(_ viewControllers: [UIViewController]?, direction: UIPageViewController.NavigationDirection, animated: Bool, completion: ((Bool) -> Void)? = nil) {
+  //    <#code#>
+  //  }
+  
 }
 
 extension RootPageViewController: UIPageViewControllerDelegate,UIPageViewControllerDataSource{
@@ -62,7 +70,16 @@ extension RootPageViewController: UIPageViewControllerDelegate,UIPageViewControl
     }
     return subViewControllers[index+1]
   }
+  
+  func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    print("finished:", finished)
+    if let index = subViewControllers.first?.view.tag{
+      currentIndex = index
+      delegateRoot?.currentPage(index)
+    }
   }
   
-  
 }
+
+
+
