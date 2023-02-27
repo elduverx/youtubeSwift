@@ -6,22 +6,22 @@
 //
 
 import UIKit
+import Foundation
 
 class HomeViewController: UIViewController {
 
-  lazy var presenter = HomePresenter(delegate: self)
-  
+    lazy var presenter = HomePresenter(delegate: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+      Task{
+        await presenter.getHomeObjects()
+      }
     }
-
-
-
 }
 
-extension HomeViewController: HomeViewProtocol{
-  func getData(list: [[Any]]) {
-    print("list:\(list)")
-  }
+extension HomeViewController : HomeViewProtocol{
+    func getData(list: [[Any]]) {
+      print("list: ", list)
+    }
 }

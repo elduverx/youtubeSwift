@@ -7,72 +7,51 @@
 
 import Foundation
 
-
-struct PlaylistModel: Decodable {
-  let kind, etag, nextPageToken, regionCode: String
-  let pageInfo: PageInfo
-  let items: [Item]
-}
-
-// MARK: - Item
-struct Item: Codable {
-  var kind, etag: String
-  var id: ID
-}
-
-// MARK: - ID
-struct ID: Codable {
-  var kind, videoID: String
-  
-  enum CodingKeys: String, CodingKey {
-    case kind
-    case videoID = "videoId"
-  }
-}
-
-// MARK: - PageInfo
-struct PageInfo: Decodable {
-  var totalResults, resultsPerPage: Int
-}
-
-struct Items: Decodable{
-  let kind: String
-  let etag : String
-  let id: String
-  let snippet: Snippet
-  let contentDetails: ContentDetail
-  
-  struct Snippet: Decodable{
-    let publishedAt: String
-    let channelId: String
-    let title: String
-    let thumbnails: Thumbnails
-    let description: String
+struct PlaylistModel: Decodable{
+    let kind : String
+    let etag : String
+    let pageInfo : PageInfo
+    let items : [Item]
     
-    let channelTitle: String
-    let localized: Localized
+    struct Item: Decodable{
+        let kind: String
+        let etag: String
+        let id: String
+        let snippet : Snippet
+        let contentDetails : ContentDetails
+        
+        struct Snippet: Decodable {
+            let publishedAt : String
+            let channelId : String
+            let title : String
+            let description : String
+            let thumbnails: Thumbnails
+            let channelTitle: String
+            
+            struct Thumbnails: Decodable{
+                let medium : Medium
+                
+                struct Medium: Decodable{
+                    let url : String
+                    let width : Int
+                    let height : Int
+                }
+            }//Thumbnails
+            
+        }//Snippet
+        
+        struct ContentDetails: Decodable{
+            let itemCount : Int
+        }//ContentDetails
+        
+    }//items
     
-    struct Thumbnails : Decodable{
-      let medium : Medium
-      struct Medium : Decodable{
-        let url: String
-        let width: Int
-        let height: Int
-      }
-    }
     
-    struct Localized: Decodable{
-      let title: String
-      let description: String
-    }
-  }
-  struct ContentDetail: Decodable{
-    let itemCount: Int
-  }
-  
+    struct PageInfo : Decodable{
+        let totalResults : Int
+        let resultsPerPage : Int
+    }//PageInfo
 }
-
-
 
 struct mainKeys{
   let api_KEY: String = "AIzaSyCZRsFZbm-T3xUg3sfXMa3h9v4eAlrPgwU"
