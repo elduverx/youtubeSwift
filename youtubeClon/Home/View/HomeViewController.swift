@@ -55,6 +55,7 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource{
       guard let channelCell = tableView.dequeueReusableCell(withIdentifier: "\(ChannelCell.self)", for: indexPath) as? ChannelCell else{
         return UITableViewCell()
       }
+      channelCell.configCell(model: channel[indexPath.row])
       return channelCell
     }else   if let playlistItems = item as? [PlaylistItemsModel.Item]{
       guard let playlistItemsCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else{
