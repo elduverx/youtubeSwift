@@ -61,11 +61,13 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource{
       guard let playlistItemsCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else{
         return UITableViewCell()
       }
+      playlistItemsCell.configCell(model: playlistItems[indexPath.row])
       return playlistItemsCell
     } else  if let videos = item as? [VideoModel.Item]{
       guard let videoCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else{
         return UITableViewCell()
       }
+      videoCell.configCell(model: videos[indexPath.row])
       return videoCell
     } else  if let playlist = item as? [PlaylistModel.Item]{
       guard let playlistItemsCell = tableView.dequeueReusableCell(withIdentifier: "\(PlaylistCell.self)", for: indexPath) as? PlaylistCell else{
@@ -79,6 +81,12 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource{
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     return sectionTitleList[section]
+  }
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    if indexPath.section == 1 || indexPath.section == 2{
+      return 95.0
+    }
+    return UITableView.automaticDimension
   }
   
 }
